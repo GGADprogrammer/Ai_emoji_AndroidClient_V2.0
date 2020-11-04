@@ -1,0 +1,155 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backgroud"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+    <!--android:background="#f2f2f2"-->
+    <include layout="@layout/camerasdk_actionbar_share" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:background="#464443"
+        android:foregroundGravity="center">
+
+        <ImageView
+            android:id="@+id/img_result"
+            android:layout_width="371dp"
+            android:layout_height="230dp"
+
+
+            android:src="@drawable/cd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <GridView
+        android:id="@+id/noScrollgridview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:horizontalSpacing="5dp"
+        android:listSelector="#00000000"
+
+        android:numColumns="1"
+        android:padding="5dip"
+        android:scrollbars="none"
+        android:verticalSpacing="5dp">
+
+    </GridView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_emoji"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/grinning_face_1f600"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_hand"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="90dp"
+                android:layout_marginRight="90dp"
+                android:background="@drawable/victory_hand_270c"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/添加手势"
+                app:layout_constraintEnd_toEndOf="@+id/btn_hand"
+                app:layout_constraintStart_toStartOf="@+id/btn_hand"
+                app:layout_constraintTop_toBottomOf="@+id/btn_hand" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/添加表情"
+                app:layout_constraintEnd_toEndOf="@+id/btn_emoji"
+                app:layout_constraintStart_toStartOf="@+id/btn_emoji"
+                app:layout_constraintTop_toBottomOf="@+id/btn_emoji" />
+
+            <Button
+                android:id="@+id/btn_upload"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="72dp"
+                android:background="@drawable/outbox_tray_1f4e4"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_emoji"
+                tools:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn_mycloudalbum"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="72dp"
+                android:layout_marginEnd="90dp"
+                android:layout_marginRight="90dp"
+                android:background="@drawable/cloud_2601"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_hand"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="查看云相册"
+                app:layout_constraintEnd_toEndOf="@+id/btn_mycloudalbum"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/btn_mycloudalbum"
+                app:layout_constraintTop_toBottomOf="@+id/btn_mycloudalbum" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/上传到云相册"
+                app:layout_constraintEnd_toEndOf="@+id/btn_upload"
+                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintStart_toStartOf="@+id/btn_upload"
+                app:layout_constraintTop_toBottomOf="@+id/btn_upload" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</LinearLayout>
+
